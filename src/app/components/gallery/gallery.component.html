@@ -28,63 +28,20 @@
                         <h1 class="home__gallery--title">Gallery</h1>
                         <h3 class="home__gallery--caption">Our work, place and more</h3><a href="#"
                             class="home__gallery--sublink"><span>9</span> photos</a>
-                        <div class="home__gallery--grid">
+                        <div class="home__gallery--grid" >
                             <div class="row small-up-1 medium-up-2 large-up-4">
-                                <div class="column column-block aos-init" data-aos="" data-aos-anchor-placement=""
-                                    data-aos-delay="">
+                                <div class="column column-block aos-init"  *ngFor="let data of photoGalleryData.images">
                                     <div class="home__gallery--item home__item-bottom"
-                                        style="background-image: url(&quot;https://az742041.vo.msecnd.net/vcsites/vcimages/resource/uploads/photogallery/cctvvnn_637002673596819071_1.jpeg&quot;);">
-                                    </div>
-                                </div>
-                                <div class="column column-block aos-init" data-aos="" data-aos-anchor-placement=""
-                                    data-aos-delay="">
-                                    <div class="home__gallery--item home__item-bottom"
-                                        style="background-image: url(&quot;https://az742041.vo.msecnd.net/vcsites/vcimages/resource/uploads/photogallery/ash_637001643540827502_1.jpg&quot;);">
-                                    </div>
-                                </div>
-                                <div class="column column-block aos-init" data-aos="" data-aos-anchor-placement=""
-                                    data-aos-delay="">
-                                    <div class="home__gallery--item home__item-bottom"
-                                        style="background-image: url(&quot;https://az742041.vo.msecnd.net/vcsites/vcimages/resource/uploads/photogallery/bigstock_cctv_securi_636999839526339613_1.jpg&quot;);">
-                                    </div>
-                                </div>
-                                <div class="column column-block aos-init" data-aos="" data-aos-anchor-placement=""
-                                    data-aos-delay="">
-                                    <div class="home__gallery--item home__item-bottom"
-                                        style="background-image: url(&quot;https://az742041.vo.msecnd.net/vcsites/vcimages/resource/uploads/photogallery/aac_636997408326259348_1.jpeg&quot;);">
-                                    </div>
-                                </div>
-                                <div class="column column-block aos-init" data-aos="fade-up"
-                                    data-aos-anchor-placement="bottom-bottom" data-aos-delay="0">
-                                    <div class="home__gallery--item home__item-bottom"
-                                        style="background-image: url(&quot;https://az742041.vo.msecnd.net/vcsites/vcimages/resource/uploads/photogallery/group-lessons_636979367440037035_1.jpg&quot;);">
-                                    </div>
-                                </div>
-                                <div class="column column-block aos-init" data-aos="fade-up"
-                                    data-aos-anchor-placement="bottom-bottom" data-aos-delay="0">
-                                    <div class="home__gallery--item home__item-bottom"
-                                        style="background-image: url(&quot;https://az742041.vo.msecnd.net/vcsites/vcimages/resource/uploads/photogallery/cctv5_636932974559517387_1.jpg&quot;);">
-                                    </div>
-                                </div>
-                                <div class="column column-block aos-init" data-aos="fade-up"
-                                    data-aos-anchor-placement="bottom-bottom" data-aos-delay="0">
-                                    <div class="home__gallery--item home__item-bottom"
-                                        style="background-image: url(&quot;https://az742041.vo.msecnd.net/vcsites/vcimages/resource/uploads/photogallery/cctv4_636932974551704980_1.jpg&quot;);">
-                                    </div>
-                                </div>
-                                <div class="column column-block aos-init" data-aos="fade-up"
-                                    data-aos-anchor-placement="bottom-bottom" data-aos-delay="0">
-                                    <div class="home__gallery--item home__item-bottom"
-                                        style="background-image: url(&quot;https://az742041.vo.msecnd.net/vcsites/vcimages/resource/uploads/photogallery/cctv3_636932974548423525_1.jpeg&quot;);">
+                                        style="background-image: url('https://az742041.vo.msecnd.net/vcsites/vcimages/resource/{{data.ImageURL}}')">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="button__container button__container--center aos-init" data-aos="fade-up"
-                            data-aos-anchor-placement="bottom-bottom" data-aos-delay="100"><button
-                                id="buttonloadmorephotos" class="button button__white button__white--orange">Load
-                                More</button></div>
                     </div>
+                    <div class="button__container button__container--center aos-init" data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom" data-aos-delay="100"><button id="buttonloadmorephotos"
+                            class="button button__white button__white--orange">Load
+                            More</button></div>
                 </div>
             </div>
         </div>

@@ -11,15 +11,14 @@ export class UtilityService {
   httpOptions= {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
       .append("source", "PWA")
-      .append("businessId", "74")
+      .append("businessid", "74")
       .append('Access-Control-Allow-Headers', 'Content-Type')
       .append('Access-Control-Allow-Methods', '*')
       .append('Access-Control-Allow-Origin', '*')
   };
-  constructor(private httpClient: HttpClient, private _cookieService: CookieService, private config: WebConfigService,) { }
+  constructor(private httpClient: HttpClient, private _cookieService: CookieService, private config: WebConfigService) { }
    
   getAPIData(apiController, apiAction, type, queryString, obj, headers) {
-    this.httpOptions.headers.set("countryCode", this._cookieService.get(this.config.getConfig().vc_countryCode));
     if (type == 1) {
       return this.httpClient.get((this.config.getConfig().PrivateAPIDomain + apiController + "/" + apiAction + queryString), this.httpOptions);
     } else {
